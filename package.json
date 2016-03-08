@@ -8,37 +8,30 @@
   "routeExposure": "/smsService",
   "staticFiles": {
     "css": {
-        "exampleCss" : "/smsService/style/example.css"
-      },
+     
+    },
     "js": {
-      "smsServiceRoute": "/smsService/scripts/routes/smsService.js",
-      "smsServiceController": "/smsService/scripts/controllers/smsService.js"
     },
-    "moduleDependencies":{
-
-    },
-    "settings": "/smsService/settings.js"
+    "moduleDependencies": {},
+  
   },
   "bodystructure": {
     "asidebarHook": [],
     "sidebarHook": [],
     "headerHook": [],
-    "footerHook":[]
+    "footerHook": []
   },
-  "databases": {
-  },
-  "pluginDepedencies": {
-     
-  },
+  "databases": {},
+  "pluginDepedencies": {},
   "activate": true,
   "services": {},
-  "dependencies": {},
+  "dependencies": {
+    "https": "^1.0.0"
+  },
   "optionalDependencies": {},
   "repository": {
     "type": "",
     "url": ""
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
