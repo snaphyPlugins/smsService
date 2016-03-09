@@ -1,5 +1,6 @@
 'use strict';
 module.exports = function(server, databaseObj, helper, packageObj) {
+    var https = require("https");
     /**
      * Here server is the main app object
      * databaseObj is the mapped database from the package.json file
@@ -22,16 +23,19 @@ module.exports = function(server, databaseObj, helper, packageObj) {
     var send = function(message, number, callback) {
         //matching the number..
         var patt = /\+\d{12,12}/;
+        //remove 0 from the number
+        number = number.replace(/^0/, "");
         var match = number.match(patt);
         if (!match) {
             number = "+91" + number;
         }
+        
 
         var apiKey = "a8147ba9";
         var apiSecret = "14ba38cb";
         var data = 'https://rest.nexmo.com' +
             '/sms/json?api_key=' + apiKey + '&api_secret=' + apiSecret +
-            '&from=Gruberr&to=' + number +
+            '&from=Mapstrack&to=' + number +
             '&text=' + message;
         https.get(
             data,
